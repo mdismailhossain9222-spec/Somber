@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
 import { Check, Loader2 } from "lucide-react";
 import { useCart } from "@/context/CartContext";
-import { formatBdt } from "@/lib/products";
+import { formatUsd } from "@/lib/products";
 import { validateCheckout, type FieldErrors } from "@/lib/validation";
 import Link from "next/link";
 import Image from "next/image";
@@ -218,7 +218,7 @@ export function CheckoutForm() {
                     </p>
                   </div>
                   <p className="text-sm text-muted">
-                    {formatBdt(item.price * item.quantity)}
+                    {formatUsd(item.price * item.quantity)}
                   </p>
                 </div>
               </li>
@@ -228,7 +228,7 @@ export function CheckoutForm() {
             <span className="text-[11px] uppercase tracking-[0.24em] text-muted">
               Total
             </span>
-            <span className="font-serif text-3xl">{formatBdt(total)}</span>
+            <span className="font-serif text-3xl">{formatUsd(total)}</span>
           </div>
         </aside>
       </div>
@@ -252,7 +252,7 @@ export function CheckoutForm() {
               <h2 className="mt-6 font-serif text-3xl">Order confirmed</h2>
               <p className="mt-4 text-sm leading-7 text-muted">
                 Thank you. Order #{success.orderId} totaling{" "}
-                {formatBdt(success.total)} will be processed via{" "}
+                {formatUsd(success.total)} will be processed via{" "}
                 {success.paymentMethod === "nagad" ? "Nagad" : "bKash"}.
               </p>
               <button

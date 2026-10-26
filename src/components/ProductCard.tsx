@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { formatBdt, type Product } from "@/lib/products";
+import { formatUsd, type Product } from "@/lib/products";
 
 export function ProductCard({
   product,
@@ -40,7 +40,7 @@ export function ProductCard({
             {product.title}
           </h3>
         </div>
-        <p className="pt-5 text-sm text-muted">{formatBdt(product.price)}</p>
+        <p className="pt-5 text-sm text-muted">{formatUsd(product.price)}</p>
       </div>
     </Link>
   );

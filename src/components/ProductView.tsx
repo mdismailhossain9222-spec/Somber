@@ -6,7 +6,7 @@ import { FadeIn } from "@/components/FadeIn";
 import { ProductCard } from "@/components/ProductCard";
 import { useCart } from "@/context/CartContext";
 import {
-  formatBdt,
+  formatUsd,
   getRelatedProducts,
   type Product,
 } from "@/lib/products";
@@ -58,7 +58,7 @@ export function ProductView({ product }: { product: Product }) {
             {product.category}
           </p>
           <h1 className="mt-4 font-serif text-5xl md:text-6xl">{product.title}</h1>
-          <p className="mt-5 font-serif text-3xl">{formatBdt(product.price)}</p>
+          <p className="mt-5 font-serif text-3xl">{formatUsd(product.price)}</p>
           <p className="mt-8 max-w-md text-sm leading-8 text-muted">
             {product.description}
           </p>

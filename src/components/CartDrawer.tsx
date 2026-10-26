@@ -5,7 +5,7 @@ import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 import { Minus, Plus, X } from "lucide-react";
 import { useCart } from "@/context/CartContext";
-import { formatBdt } from "@/lib/products";
+import { formatUsd } from "@/lib/products";
 
 export function CartDrawer() {
   const {
@@ -72,7 +72,7 @@ export function CartDrawer() {
                           <div>
                             <p className="font-serif text-lg">{item.title}</p>
                             <p className="mt-1 text-sm text-muted">
-                              {formatBdt(item.price)}
+                              {formatUsd(item.price)}
                             </p>
                           </div>
                           <button
@@ -120,7 +120,7 @@ export function CartDrawer() {
                 <span className="uppercase tracking-[0.24em] text-muted">
                   Total
                 </span>
-                <span className="font-serif text-2xl">{formatBdt(total)}</span>
+                <span className="font-serif text-2xl">{formatUsd(total)}</span>
               </div>
               <Link
                 href="/checkout"

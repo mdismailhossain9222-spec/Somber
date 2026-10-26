@@ -29,7 +29,7 @@ export const products: Product[] = [
   {
     id: "nordic-overcoat",
     title: "Nordic Overcoat",
-    price: 24500,
+    price: 320,
     image: img(2),
     gallery: productGallery(2),
     category: "Outerwear",
@@ -44,7 +44,7 @@ export const products: Product[] = [
   {
     id: "silhouette-blazer",
     title: "Silhouette Blazer",
-    price: 18900,
+    price: 245,
     image: img(7),
     gallery: productGallery(7),
     category: "Tailoring",
@@ -59,7 +59,7 @@ export const products: Product[] = [
   {
     id: "void-turtleneck",
     title: "Void Turtleneck",
-    price: 8500,
+    price: 120,
     image: img(3),
     gallery: productGallery(3),
     category: "Knitwear",
@@ -74,7 +74,7 @@ export const products: Product[] = [
   {
     id: "aurora-trouser",
     title: "Aurora Trouser",
-    price: 12200,
+    price: 145,
     image: img(5),
     gallery: productGallery(5),
     category: "Bottoms",
@@ -89,7 +89,7 @@ export const products: Product[] = [
   {
     id: "eclipse-dress",
     title: "Eclipse Dress",
-    price: 21000,
+    price: 280,
     image: img(4),
     gallery: productGallery(4),
     category: "Atelier",
@@ -104,7 +104,7 @@ export const products: Product[] = [
   {
     id: "frost-shirt",
     title: "Frost Shirt",
-    price: 9800,
+    price: 95,
     image: img(1),
     gallery: productGallery(1),
     category: "Shirts",
@@ -119,7 +119,7 @@ export const products: Product[] = [
   {
     id: "polar-parka",
     title: "Polar Parka",
-    price: 27500,
+    price: 380,
     image: img(2),
     gallery: productGallery(2),
     category: "Outerwear",
@@ -134,7 +134,7 @@ export const products: Product[] = [
   {
     id: "meridian-coat",
     title: "Meridian Coat",
-    price: 32000,
+    price: 450,
     image: img(0),
     gallery: productGallery(0),
     category: "Outerwear",
@@ -149,7 +149,7 @@ export const products: Product[] = [
   {
     id: "obelisk-suit",
     title: "Obelisk Suit",
-    price: 45000,
+    price: 450,
     image: img(8),
     gallery: productGallery(8),
     category: "Tailoring",
@@ -164,7 +164,7 @@ export const products: Product[] = [
   {
     id: "halo-knit",
     title: "Halo Knit",
-    price: 11200,
+    price: 160,
     image: img(9),
     gallery: productGallery(9),
     category: "Knitwear",
@@ -179,7 +179,7 @@ export const products: Product[] = [
   {
     id: "lunar-skirt",
     title: "Lunar Skirt",
-    price: 13500,
+    price: 175,
     image: img(4),
     gallery: productGallery(4),
     category: "Bottoms",
@@ -194,7 +194,7 @@ export const products: Product[] = [
   {
     id: "noir-column",
     title: "Noir Column",
-    price: 24000,
+    price: 295,
     image: img(11),
     gallery: productGallery(11),
     category: "Atelier",
@@ -248,6 +248,6 @@ export function getRelatedProducts(id: string, count = 3): Product[] {
   return [...same, ...others].slice(0, count);
 }
 
-export function formatBdt(amount: number): string {
-  return `৳ ${amount.toLocaleString("en-BD")}`;
+export function formatUsd(amount: number): string {
+  return `$${amount.toLocaleString("en-US")}`;
 }
