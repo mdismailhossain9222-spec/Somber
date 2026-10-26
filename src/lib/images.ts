@@ -1,32 +1,28 @@
-// Local editorial images generated for SØNDER (see public/images/).
-// Named sonder-01..sonder-16.jpg. All full-color, no filters applied.
+// Real high-fashion editorial photography from Unsplash.
+// All full-color, no filters applied.
 
-const BASE = "/images";
+const UNSPLASH = "https://images.unsplash.com";
 
 export const heroImages = [
-  `${BASE}/sonder-01.jpg`,
-  `${BASE}/sonder-02.jpg`,
-  `${BASE}/sonder-03.jpg`,
-  `${BASE}/sonder-04.jpg`,
-  `${BASE}/sonder-05.jpg`,
-  `${BASE}/sonder-06.jpg`,
-  `${BASE}/sonder-07.jpg`,
-  `${BASE}/sonder-08.jpg`,
-  `${BASE}/sonder-09.jpg`,
-  `${BASE}/sonder-10.jpg`,
-  `${BASE}/sonder-11.jpg`,
-  `${BASE}/sonder-12.jpg`,
-  `${BASE}/sonder-13.jpg`,
-  `${BASE}/sonder-14.jpg`,
-  `${BASE}/sonder-15.jpg`,
-  `${BASE}/sonder-16.jpg`,
+  `${UNSPLASH}/photo-1483985988355-763728e1935b?q=80&w=1000`,
+  `${UNSPLASH}/photo-1539008835657-9e8e9680c956?q=80&w=1000`,
+  `${UNSPLASH}/photo-1515886657613-9f3515b0c78f?q=80&w=1000`,
+  `${UNSPLASH}/photo-1550614000-4b95d99fbfa3?q=80&w=1000`,
+  `${UNSPLASH}/photo-1490481651871-ab68de25d43d?q=80&w=1000`,
+  `${UNSPLASH}/photo-1509631179647-0177331693ae?q=80&w=1000`,
+  `${UNSPLASH}/photo-1581044777550-4cfa60707c03?q=80&w=1000`,
+  `${UNSPLASH}/photo-1529139574466-a303027c1d8b?q=80&w=1000`,
+  `${UNSPLASH}/photo-1512436991641-6745cdb1723f?q=80&w=1000`,
+  `${UNSPLASH}/photo-1542291026-7eec264c27ff?q=80&w=1000`,
+  `${UNSPLASH}/photo-1617137968427-85924c800a22?q=80&w=1000`,
+  `${UNSPLASH}/photo-1488161628813-04466f872be2?q=80&w=1000`,
 ] as const;
 
 /** Deterministic image for a product index (0-based). */
 export const productImage = (index: number) =>
   heroImages[((index % 12) + 12) % 12];
 
-/** Deterministic gallery images for a product index (3 images, in-bounds). */
+/** Deterministic gallery images for a product index. */
 export const productGallery = (index: number) => [
   heroImages[12 + (index % 4)],
   heroImages[12 + ((index + 1) % 4)],
@@ -39,11 +35,11 @@ export const lookbookImage = (index: number) =>
 
 /** About story chapter images. */
 export const aboutImages = [
-  `${BASE}/sonder-13.jpg`,
-  `${BASE}/sonder-14.jpg`,
-  `${BASE}/sonder-15.jpg`,
-  `${BASE}/sonder-16.jpg`,
+  `${UNSPLASH}/photo-1483985988355-763728e1935b?q=80&w=1000`,
+  `${UNSPLASH}/photo-1515886657613-9f3515b0c78f?q=80&w=1000`,
+  `${UNSPLASH}/photo-1490481651871-ab68de25d43d?q=80&w=1000`,
+  `${UNSPLASH}/photo-1509631179647-0177331693ae?q=80&w=1000`,
 ] as const;
 
 /** Philosophy section image. */
-export const philosophyImage = `${BASE}/sonder-01.jpg`;
+export const philosophyImage = `${UNSPLASH}/photo-1483985988355-763728e1935b?q=80&w=1000`;
