@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #09090b;
+  --color-foreground: #fafafa;
+  --color-muted: #a1a1aa;
+  --color-bkash: #e2136e;
+  --color-nagad: #f6921e;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-playfair), ui-serif, Georgia, "Times New Roman",
+    serif;
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+body {
+  background: #09090b;
+  color: #fafafa;
+  font-family: var(--font-sans);
+}
+
+::selection {
+  background: #fafafa;
+  color: #09090b;
+}
+
+@keyframes marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-track {
+  animation: marquee-scroll 32s linear infinite;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+input,
+textarea,
+button,
+select {
+  font-family: inherit;
+}
+
+input:-webkit-autofill,
+textarea:-webkit-autofill {
+  -webkit-text-fill-color: #fafafa;
+  box-shadow: 0 0 0 1000px #09090b inset;
+  caret-color: #fafafa;
+}
