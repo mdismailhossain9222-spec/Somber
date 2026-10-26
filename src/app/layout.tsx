@@ -24,6 +24,11 @@ export const metadata: Metadata = {
   title: "SØNDER — Modern Fashion Atelier",
   description:
     "SØNDER redefines the boundaries of modern fashion. Scandinavian minimalism, futuristic tailoring, AW26 collection.",
+  icons: {
+    icon: "/favicon.svg",
+    shortcut: "/favicon.svg",
+    apple: "/favicon.svg",
+  },
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
